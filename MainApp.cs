@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections;
+using static System.Console;
 
 namespace Chapter_04
 {
@@ -6,7 +7,19 @@ namespace Chapter_04
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ArrayList a = null;
+            a?.Add("야구");   // a?가 null을 반환하므로 Add()메소드는 호출되지 않는다
+            a?.Add("축구");
+            WriteLine($"Count : {a?.Count}");
+            WriteLine($"{a?[0]}");
+            WriteLine($"{a?[1]}");
+
+            a = new ArrayList();    // a는 더이상 null이 아니다
+            a?.Add("야구");
+            a?.Add("축구");
+            WriteLine($"Count : {a?.Count}");
+            WriteLine($"{a?[0]}");
+            WriteLine($"{a?[1]}");
         }
     }
 }

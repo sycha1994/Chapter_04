@@ -7,17 +7,17 @@ namespace Chapter_04
     {
         static void Main(string[] args)
         {
-            int? num = null;
-            WriteLine($"{num ?? 0}");
+            int a = 10;
+            string b = a == 0 ? "abc" : "efg";
+            WriteLine(b);
 
-            num = 99;
-            WriteLine($"{num ?? 0}");
+            int aa = 0xF0 | 0x0F;
+            WriteLine(aa);
 
-            string str = null;
-            WriteLine($"{str ?? "Default"}");
-
-            str = "Specific";
-            WriteLine($"{str ?? "Default"}");
+            int a1 = 8 >> 1;
+            int b1 = a >> 2;
+            WriteLine(a1);
+            WriteLine(b1);
         }
 
     }
